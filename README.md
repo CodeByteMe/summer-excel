@@ -8,13 +8,14 @@ summer-excel是一个基于对象关系映射解决Excel数据读取提供稳定
 ## 使用示例
 
 ###数据类型
+
 |JavaType|ExcelType|
 |:---|:---|
 |java.lang.String |CellType.STRING|
 |java.lang.Boolean|CellType.BOOLEAN|
 |java.lang.Integer|CellType.NUMERIC|
 |java.lang.Date   |CellType.NUMERIC|
-| ...
+| ...|...|
 
 ###对象关系映射
 ``` Java

@@ -4,9 +4,9 @@ import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellType;
 
 /**
+ * Excel 单元格取值
  * @author Cheng.Wei
  */
-  
 public class ExcelCellValue {
     /**
      * 取值

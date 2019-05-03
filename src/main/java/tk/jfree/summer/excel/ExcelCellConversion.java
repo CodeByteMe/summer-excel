@@ -1,6 +1,7 @@
 package tk.jfree.summer.excel;
 
 /**
+ * Excel 行列转换计算
  * @author Cheng.Wei
  */
 public class ExcelCellConversion {

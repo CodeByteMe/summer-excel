@@ -9,7 +9,7 @@ import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
 /**
- * Excel 行注释
+ * Excel 列注解
  * @author Cheng.Wei
  */
 

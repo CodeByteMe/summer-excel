@@ -16,11 +16,10 @@ import java.util.concurrent.ConcurrentHashMap;
  * 转换 java.time.LocalDate
  * @author Cheng.Wei
  */
-public class LocalDateTypeHandler implements TypeHandler<LocalDate> {
-    private final Field field;
+public class LocalDateTypeHandler extends AbstractTypeHandler<LocalDate> {
 
     public LocalDateTypeHandler(Field field) {
-        this.field = field;
+       super(field);
     }
     private static final Map<String, DateTimeFormatter> LOCAL_DATE_FORMATTER =  new ConcurrentHashMap<>();
     @Override
@@ -28,7 +27,7 @@ public class LocalDateTypeHandler implements TypeHandler<LocalDate> {
         if (CellType.NUMERIC == cell.getCellType()) {
             return LocalDateTime.ofInstant(cell.getDateCellValue().toInstant(), ZoneId.systemDefault()).toLocalDate();
         }
-        String format = field.getAnnotation(Column.class).format();
+        String format = getField().getAnnotation(Column.class).format();
         if (!LOCAL_DATE_FORMATTER.containsKey(format)){
             LOCAL_DATE_FORMATTER.put(format, DateTimeFormatter.ofPattern(format));
         }

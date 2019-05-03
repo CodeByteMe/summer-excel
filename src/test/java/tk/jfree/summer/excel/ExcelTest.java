@@ -13,7 +13,7 @@ public class ExcelTest {
         try{
             ExcelHelper.builder(Employee.class).read(new FileInputStream(FileUtilTest.getWebRootPath("employee.xlsx"))).getData().stream().forEach(System.out::println);
             System.out.println("==============================");
-            ExcelHelper.builder(Log.class).read( new FileInputStream(FileUtilTest.getWebRootPath("employee.xlsx"))).getData().stream().forEach(System.out::println);
+            ExcelHelper.builder(Log.class).read(new FileInputStream(FileUtilTest.getWebRootPath("employee.xlsx"))).getData().stream().forEach(System.out::println);
         }catch (Exception e){
             e.printStackTrace();
         }

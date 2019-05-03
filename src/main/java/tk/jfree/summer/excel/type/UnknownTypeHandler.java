@@ -11,9 +11,10 @@ import java.lang.reflect.Field;
  * 定制参数转换 {@link tk.jfree.summer.excel.type.TypeHandler}
  * @author Cheng.Wei
  */
-public class UnknownTypeHandler implements TypeHandler<Object> {
+public class UnknownTypeHandler extends AbstractTypeHandler<Object> {
 
     public UnknownTypeHandler(Field field) {
+        super(field);
     }
 
     @Override

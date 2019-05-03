@@ -12,11 +12,10 @@ import java.util.Date;
  * 转换 java.util.Date
  * @author Cheng.Wei
  */
-public class DateTimeTypeHandler implements TypeHandler<java.util.Date> {
-    private final Field field;
+public class DateTimeTypeHandler extends AbstractTypeHandler<Date> {
 
     public DateTimeTypeHandler(Field field) {
-        this.field = field;
+        super(field);
     }
 
     @Override
@@ -24,6 +23,6 @@ public class DateTimeTypeHandler implements TypeHandler<java.util.Date> {
         if (CellType.NUMERIC == cell.getCellType()) {
             return cell.getDateCellValue();
         }
-        return new SimpleDateFormat(field.getAnnotation(Column.class).format()).parse(cell.getStringCellValue());
+        return new SimpleDateFormat(getField().getAnnotation(Column.class).format()).parse(cell.getStringCellValue());
     }
 }

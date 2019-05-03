@@ -14,12 +14,12 @@ import tk.jfree.summer.excel.type.IntegerTypeHandler;
 @Getter
 @Setter
 @ToString
-@Table(sheet = "人员信息", start = 1)
+@Table(sheet = "人员信息", first = 1)
 public class Employee {
     @Column(name = "A", notes = "姓名")
     private String name;
     @Column(name = "B", notes = "年龄", typeHandler = IntegerTypeHandler.class)
     private Integer age;
-    @Column(name = "C", notes = "录入时间", format = "yyyy-MM-dd hh:mm:ss", typeHandler = DateTimeTypeHandler.class)
+    @Column(name = "C", notes = "录入时间", format = "yyyy年MM月dd日 hh:mm:ss", typeHandler = DateTimeTypeHandler.class)
     private java.util.Date gmtCreate;
 }

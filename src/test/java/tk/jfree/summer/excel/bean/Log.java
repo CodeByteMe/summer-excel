@@ -13,7 +13,7 @@ import tk.jfree.summer.excel.type.DateTimeTypeHandler;
 @Getter
 @Setter
 @ToString
-@Table(sheet = "日志信息", start = 1)
+@Table(sheet = "日志信息", first = 1)
 public class Log {
     @Column(name = "A", notes = "账号")
     private String username;

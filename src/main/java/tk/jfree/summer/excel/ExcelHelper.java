@@ -39,13 +39,13 @@ public class ExcelHelper<T> {
 
     /**
      * 默认读取第一个 sheet=0  {@link tk.jfree.summer.excel.annotation.Table#sheet}
-     * 默认start =1  {@link tk.jfree.summer.excel.annotation.Table#start}
+     * 默认start =1  {@link tk.jfree.summer.excel.annotation.Table#first}
      * @param input
      * @return
      */
     public ExcelResult<T> read(InputStream input)throws Exception{
         Table table = Optional.ofNullable(clazz.getAnnotation(Table.class)).orElseThrow(()-> new ExcelExceprion(clazz+"缺少tk.jfree.summer.excel.annotation.Table注解"));
-        return read(table.sheet(), table.start(), input);
+        return read(table.sheet(), table.first(), input);
     }
 
     /**

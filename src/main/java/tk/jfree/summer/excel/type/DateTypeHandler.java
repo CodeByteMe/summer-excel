@@ -13,11 +13,10 @@ import java.text.SimpleDateFormat;
  * 转换 java.sql.Date
  * @author Cheng.Wei
  */
-public class DateTypeHandler implements TypeHandler<java.sql.Date> {
-    private final Field field;
+public class DateTypeHandler extends AbstractTypeHandler<Date> {
 
     public DateTypeHandler(Field field) {
-        this.field = field;
+        super(field);
     }
 
     @Override
@@ -25,7 +24,7 @@ public class DateTypeHandler implements TypeHandler<java.sql.Date> {
         if (CellType.NUMERIC == cell.getCellType()) {
             return new Date(cell.getDateCellValue().getTime());
         }
-        java.util.Date date = new SimpleDateFormat(field.getAnnotation(Column.class).format()).parse(cell.getStringCellValue());
+        java.util.Date date = new SimpleDateFormat(getField().getAnnotation(Column.class).format()).parse(cell.getStringCellValue());
         return new Date(date.getTime());
     }
 }

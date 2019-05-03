@@ -55,7 +55,7 @@ public class DateTimeTypeHandler implements TypeHandler<java.util.Date> {
 }
 
 ```
-####（推荐）方式二 继承tk.jfree.summer.excel.type.AbstractTypeHandler
+#### （推荐）方式二 继承tk.jfree.summer.excel.type.AbstractTypeHandler
 ``` Java
 
 public class DateTimeTypeHandler extends AbstractTypeHandler<Date> {

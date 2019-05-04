@@ -1,7 +1,7 @@
 # summer-excel
 
 ## 介绍
-summer-excel是一个基于对象关系映射解决Excel数据读取提供稳定、便捷、可定制的Excel数据读取工具。
+summer-excel是一个基于对象关系映射稳定、便捷、可定制的Excel数据读取工具。
 
 ## 运行环境
 JDK1.8

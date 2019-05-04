@@ -4,19 +4,19 @@ package tk.jfree.summer.excel.exception;
  * @author Cheng.Wei
  */
 public class ExcelException extends RuntimeException{
-    public ExcelExceprion() {
+    public ExcelException() {
         super();
     }
 
-    public ExcelExceprion(String message) {
+    public ExcelException(String message) {
         super(message);
     }
 
-    public ExcelExceprion(String message, Throwable cause) {
+    public ExcelException(String message, Throwable cause) {
         super(message, cause);
     }
 
-    public ExcelExceprion(Throwable cause) {
+    public ExcelException(Throwable cause) {
         super(cause);
     }
 }

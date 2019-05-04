@@ -13,6 +13,7 @@ public class IntegerTypeHandler extends AbstractTypeHandler<Integer> {
     public  IntegerTypeHandler(Field field){super(field);}
     @Override
     public Integer get(Cell cell) throws Exception {
-        return Integer.parseInt(new DecimalFormat("#").format(cell.getNumericCellValue()));
+        double v = cell.getNumericCellValue();
+        return v == 0 ? null : Integer.parseInt(new DecimalFormat("#").format(v));
     }
 }

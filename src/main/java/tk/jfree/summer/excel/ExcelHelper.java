@@ -6,7 +6,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.ss.usermodel.WorkbookFactory;
 import tk.jfree.summer.excel.annotation.Table;
-import tk.jfree.summer.excel.exception.ExcelExceprion;
+import tk.jfree.summer.excel.exception.ExcelException;
 import tk.jfree.summer.excel.reflection.Reflector;
 
 import java.io.InputStream;
@@ -44,7 +44,7 @@ public class ExcelHelper<T> {
      * @return
      */
     public ExcelResult<T> read(InputStream input)throws Exception{
-        Table table = Optional.ofNullable(clazz.getAnnotation(Table.class)).orElseThrow(()-> new ExcelExceprion(clazz+"缺少tk.jfree.summer.excel.annotation.Table注解"));
+        Table table = Optional.ofNullable(clazz.getAnnotation(Table.class)).orElseThrow(()-> new ExcelException(clazz+"缺少tk.jfree.summer.excel.annotation.Table注解"));
         return read(table.sheet(), table.first(), input);
     }
 

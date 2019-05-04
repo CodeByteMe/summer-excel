@@ -12,7 +12,7 @@ public interface TypeHandler<V> {
     /**
      * 获取当前单元格内容
      * @param cell
-     * @return
+     * @return 返回当Cell的内容
      * @throws Exception
      */
     V get(Cell cell) throws Exception;

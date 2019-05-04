@@ -7,6 +7,8 @@ import tk.jfree.summer.excel.annotation.Column;
 import tk.jfree.summer.excel.annotation.Table;
 import tk.jfree.summer.excel.type.DateTimeTypeHandler;
 
+import java.io.Serializable;
+
 /**
  * @author Cheng.Wei
  */
@@ -14,7 +16,7 @@ import tk.jfree.summer.excel.type.DateTimeTypeHandler;
 @Setter
 @ToString
 @Table(sheet = "日志信息", first = 1)
-public class Log {
+public class Log implements Serializable {
     @Column(name = "A", notes = "账号")
     private String username;
     @Column(name = "B", notes = "时间", format = "yyyy-MM-dd hh:mm:ss", typeHandler = DateTimeTypeHandler.class)

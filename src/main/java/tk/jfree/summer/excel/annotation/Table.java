@@ -14,14 +14,13 @@ import java.lang.annotation.Target;
 public @interface Table {
     /**
      * 数据起始行（默认第一行）
-     * @return
+     * @return 第一行数据
      */
     int first() default 1;
 
     /**
      * 工作表名
-     * 默认参数将无法保证读取的准确性
-     * @return
+     * @return 默认参数将无法保证读取的准确性
      */
     String sheet() default "";
 }

@@ -17,26 +17,26 @@ import java.lang.annotation.Target;
 @Target({ElementType.FIELD})
 public @interface Column {
     /**
-     * 列的名称,对应字母坐标A,B,C,D....
-     * @return
+     * 返回列的名称
+     * @return 字母坐标A,B,C,D....
      */
     String name();
 
     /**
-     * 表格列文字描述
-     * @return
+     * 返回列的描述信息
+     * @return 列描述信息，默认空""
      */
     String notes() default "";
 
     /**
-     * 格式化
-     * @return
+     * 返回一中格式 如时间格式， yyyy-MM-dd ...
+     * @return 返回格式
      */
     String format() default "";
 
     /**
-     * 解析器
-     * @return
+     * 返回数据类型解析器
+     * @return 默认返回 UnknownTypeHandler
      */
     Class<? extends TypeHandler<?>> typeHandler() default UnknownTypeHandler.class;
 }

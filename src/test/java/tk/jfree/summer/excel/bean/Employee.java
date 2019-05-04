@@ -8,6 +8,8 @@ import tk.jfree.summer.excel.annotation.Table;
 import tk.jfree.summer.excel.type.DateTimeTypeHandler;
 import tk.jfree.summer.excel.type.IntegerTypeHandler;
 
+import java.io.Serializable;
+
 /**
  * @author Cheng.Wei
  */
@@ -15,7 +17,7 @@ import tk.jfree.summer.excel.type.IntegerTypeHandler;
 @Setter
 @ToString
 @Table(sheet = "人员信息", first = 1)
-public class Employee {
+public class Employee implements Serializable {
     @Column(name = "A", notes = "姓名")
     private String name;
     @Column(name = "B", notes = "年龄", typeHandler = IntegerTypeHandler.class)

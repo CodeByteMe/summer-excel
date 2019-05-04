@@ -11,7 +11,7 @@ public class ExcelCellValue {
     /**
      * 取值
      * @param cell
-     * @return
+     * @return 根据单元格类型返回 {@link org.apache.poi.ss.usermodel.CellType}
      */
     public static Object get(Cell cell){
         if (cell == null){

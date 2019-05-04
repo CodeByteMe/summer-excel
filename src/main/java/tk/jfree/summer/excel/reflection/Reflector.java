@@ -1,6 +1,7 @@
 package tk.jfree.summer.excel.reflection;
 
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import tk.jfree.summer.excel.ExcelCellConversion;
 import tk.jfree.summer.excel.annotation.Column;
 import tk.jfree.summer.excel.reflection.invoker.FieldInvoker;
@@ -15,8 +16,10 @@ import java.util.stream.Stream;
 /**
  * @author Cheng.Wei
  */
-@Slf4j
 public class Reflector {
+
+    private static final Logger log = LoggerFactory.getLogger(Reflector.class);
+
     private static final Map<Class<?>, Map<Integer, Invoker>> ORM_MAP = new ConcurrentHashMap<>();
 
     public static Map<Integer, Invoker> of(Class<?> clazz) {

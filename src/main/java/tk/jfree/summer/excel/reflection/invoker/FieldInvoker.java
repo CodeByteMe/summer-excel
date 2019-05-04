@@ -1,7 +1,8 @@
 package tk.jfree.summer.excel.reflection.invoker;
 
-import lombok.extern.slf4j.Slf4j;
 import org.apache.poi.ss.usermodel.Cell;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import tk.jfree.summer.excel.annotation.Column;
 import tk.jfree.summer.excel.type.TypeHandler;
 
@@ -12,9 +13,11 @@ import java.util.concurrent.ConcurrentHashMap;
 /**
  * @author Cheng.Wei
  */
-@Slf4j
 public class FieldInvoker implements Invoker {
+    private static final Logger log = LoggerFactory.getLogger(FieldInvoker.class);
+
     private static final Map<String, TypeHandler> RESULT_MAP = new ConcurrentHashMap<>();
+
     private final Field field;
 
     public FieldInvoker(Field field) {

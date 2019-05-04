@@ -7,8 +7,8 @@ package tk.jfree.summer.excel;
 public class ExcelCellConversion {
     /**
      * Excel 列转序号
-     * @param col
-     * @return
+     * @param col 列号 A、B ...AA、AB ...
+     * @return 返回序号
      */
     public static int getColumn(String col) {
         int column = -1;
@@ -22,8 +22,8 @@ public class ExcelCellConversion {
 
     /**
      * Excel 序号转列
-     * @param index
-     * @return
+     * @param index 列转行后的序号 A-> 0 、B->1 ...
+     * @return 返回序号
      */
     public static String getIndex(int index) {
         int num = 65;

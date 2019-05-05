@@ -18,6 +18,19 @@ JDK1.8
 |java.lang.Date   |CellType.NUMERIC|
 | ...|...|
 
+### 使用 Maven  
+
+在 pom.xml 中添加如下依赖：
+
+```xml 
+<dependency>
+  <groupId>tk.jfree.summer</groupId>
+  <artifactId>summer-excel</artifactId>
+  <version>0.1.0</version>
+</dependency>
+```
+
+
 ### 对象关系映射
 ``` Java
 @Table(sheet = "日志信息", first = 1)

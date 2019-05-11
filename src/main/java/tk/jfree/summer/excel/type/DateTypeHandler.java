@@ -13,7 +13,7 @@ import java.text.SimpleDateFormat;
  * 转换 java.sql.Date
  * @author Cheng.Wei
  */
-public class DateTypeHandler extends AbstractTypeHandler<Date> {
+public class DateTypeHandler extends AbstractTypeHandler<java.sql.Date> {
 
     public DateTypeHandler(Field field) {
         super(field);

@@ -8,7 +8,6 @@ import java.text.DecimalFormat;
 /**
  * java.lang.Long
  * @author Cheng.Wei
- *
  */
 public class LongTypeHandler extends AbstractTypeHandler<java.lang.Long>{
     public LongTypeHandler(Field field) {

@@ -7,7 +7,6 @@ import java.lang.reflect.Field;
 /**
  * 字符串类型java.lang.String
  * @author Cheng.Wei
- *
  */
 public class StringTypeHandler extends AbstractTypeHandler<java.lang.String>{
     public StringTypeHandler(Field field) {

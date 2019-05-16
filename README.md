@@ -16,6 +16,7 @@ JDK1.8
 |java.lang.Boolean|CellType.BOOLEAN|
 |java.lang.Integer|CellType.NUMERIC|
 |java.lang.Date   |CellType.NUMERIC|
+|java.lang.Enum   |CellType.STRING|
 | ...|...|
 
 ### 使用 Maven  

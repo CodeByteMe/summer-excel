@@ -34,7 +34,7 @@ public class FieldInvoker implements Invoker {
             field.set(target, RESULT_MAP.get(clazz.getName()).get(cell));
             return true;
         } catch (Exception e) {
-            log.debug("赋值操作异常:{}", e);
+            log.warn("赋值操作异常:{}", e);
             return false;
         }
     }

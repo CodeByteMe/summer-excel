@@ -12,7 +12,7 @@ import java.util.Date;
  * 转换 java.util.Date
  * @author Cheng.Wei
  */
-public class DateTimeTypeHandler extends AbstractTypeHandler<Date> {
+public class DateTimeTypeHandler extends AbstractTypeHandler<java.util.Date> {
 
     public DateTimeTypeHandler(Field field) {
         super(field);

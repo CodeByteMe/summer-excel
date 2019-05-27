@@ -7,7 +7,6 @@ import java.lang.reflect.Field;
 /**
  * 转换 java.lang.Double
  * @author Cheng.Wei
- *
  */
 public class DoubleTypeHandler extends AbstractTypeHandler<java.lang.Double>{
     public DoubleTypeHandler(Field field) {

@@ -33,7 +33,6 @@ public class Reflector {
                     .forEach(
                             field ->{
                                try {
-
                                    Column column = field.getAnnotation(Column.class);
                                    map.put(ExcelCellConversion.getColumn(column.name()), new FieldInvoker(field));
                                }catch (Exception e){

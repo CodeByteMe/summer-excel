@@ -16,6 +16,7 @@ JDK1.8
 |java.lang.Boolean|CellType.BOOLEAN|
 |java.lang.Integer|CellType.NUMERIC|
 |java.lang.Date   |CellType.NUMERIC|
+|java.lang.Enum   |CellType.STRING|
 | ...|...|
 
 ### 使用 Maven  
@@ -71,7 +72,7 @@ public class DateTimeTypeHandler implements TypeHandler<java.util.Date> {
 #### （推荐）方式二 继承tk.jfree.summer.excel.type.AbstractTypeHandler
 ``` Java
 
-public class DateTimeTypeHandler extends AbstractTypeHandler<Date> {
+public class DateTimeTypeHandler extends AbstractTypeHandler<java.util.Date> {
 
     public DateTimeTypeHandler(Field field) {
         super(field);

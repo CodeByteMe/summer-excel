@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Optional;
 
 /**
- * excel 数据读取
+ * Excel 数据读取
  * @author Cheng.Wei
  */
 public class ExcelHelper<T> {
@@ -35,7 +35,7 @@ public class ExcelHelper<T> {
      * @return Excel读取结果
      * @throws Exception
      */
-    public static  ExcelHelper builder(Class clazz){
+    public static ExcelHelper builder(Class clazz){
         return new ExcelHelper(clazz);
     }
 
@@ -66,7 +66,7 @@ public class ExcelHelper<T> {
             return ExcelResult.builder().sheet(sheet.getSheetName()).firstRow(start).lastRow(sheet.getLastRowNum()).build();
         }
         List tList = new ArrayList<>(sheet.getLastRowNum()-start);
-        for (int i = start; i <= sheet.getLastRowNum(); i++) {
+        for (int i = start, length = sheet.getLastRowNum(); i <= length; i++) {
             Row row = sheet.getRow(i);
             T t = clazz.newInstance();
             Reflector.of(clazz).forEach((k, v) -> v.invoke(t, row.getCell(k)));
